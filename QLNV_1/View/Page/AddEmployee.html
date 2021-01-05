@@ -127,7 +127,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" id="btn-saveEmployee"  class="btn btn-secondary btn-signin mt-5">SAVE</button>
+                    <button type="button" id="btn-saveEmployee"  class="btn btn-secondary btn-signin mt-5">SAVE</button>
                 </form>
             </div>
         </div>
@@ -166,7 +166,7 @@
                 var file = files[index];
                 var fileReader = new FileReader();
                 fileReader.onload = function () {
-                    var str = `<div> <img class="img-addproduct js-file-image" style=""><div>`;
+                    var str = `<div> <img class="img-addproduct js-file-image"  id="img-employee" style=""><div>`;
                     $('.js-file-list').append(str);
 
                     var imageSrc = event.target.result;
@@ -181,7 +181,7 @@
             }
         });
     </script>
-    <script src="../Script/Main.js"></script>
+    <script src="../Script/AddEmployee.js"></script>
 </body>
 
 </html>

@@ -41,8 +41,12 @@ thead tr{
 /* Modal Header */
 .modal-header {
     padding: 2px 4px !important;
-    background-color: midnightblue;
+    background-color: black;
     color: white;
+    font-family:Corbel;
+    font-size: 15px;
+    font-weight: 700;
+    text-align:center;
 }
 
 /* Modal Body */
@@ -59,9 +63,9 @@ thead tr{
     position: relative;
     background-color: #fefefe;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 80px;
     margin-left: 20% !important;
-    width: 70% !important;
+    width: 60% !important;
     padding: 0;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -69,14 +73,23 @@ thead tr{
     animation-duration: 0.4s
 }
 
+.modal-body .row img{
+    margin-top:-17px;
+    margin-bottom:-16px;
+    margin-left: -15px;
+    width: 100%;
+}
+
+.content .col-md-9
+{
+    text-align: center;
+}
 /* Add Animation */
 @keyframes animatetop {
     from {
         top:30px;
         opacity: 0
     }
-
-
     to {
         top:40px;
         opacity: 0.8

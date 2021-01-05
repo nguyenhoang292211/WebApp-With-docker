@@ -1,10 +1,7 @@
 ﻿$(document).ready(function () {
 
     var em = new Employees();
-    $('#btn-saveEmployee').click(function () {
-        em.addEmployee();
-        return false;
-    });
+    
 })
 
 
@@ -25,8 +22,8 @@ class Employees {
     loadEmployeesUI(employees) {
         $('#listEmployee').empty();
         $.each(employees, function (index, item) {
-            var html = $(`<tr>
-                        <td>`+ index +`</td>
+            var html = $(`<tr class="data">
+                        <td class="index">`+ index +`</td>
                         <td><img src="" /></td>
                         <td>`+ item.name +`</td>
                         <td>`+item.phone+`</td>
@@ -45,10 +42,44 @@ class Employees {
 
                                 </div>
                                 <div class="modal-body">
-                                    <p>`+ item.name + `</p>
-                                    <p>`+ item.address +`</p>
+                                    <div class="row">
+                                        <img class="col-md-5" src="../Images/image1.jpg"/>
+                                        <div class="col-md-7 content">
+                                            <div class="row">
+                                                <div class="col-md-3"><label>Full name: </label></div>
+                                                <div class="col-md-9"> <p>`+ item.name + `</p></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3"><label>Address : </label></div>
+                                                <div class="col-md-9"> <p>`+ item.address + `</p></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3"><label>Phone : </label></div>
+                                                <div class="col-md-9"> <p>`+ item.phone + `</p></div>
+                                            </div>
+                                             <div class="row">
+                                                <div class="col-md-3"><label>Salary : </label></div>
+                                                <div class="col-md-9"> <p>`+ item.salary + `</p></div>
+                                            </div>
+                                             <div class="row">
+                                                <div class="col-md-3"><label>Email : </label></div>
+                                                <div class="col-md-9"> <p>`+ item.email + `</p></div>
+                                            </div>
+                                           <div class="row">
+                                                <div class="col-md-3"><label>Identity Card : </label></div>
+                                                <div class="col-md-9"> <p>`+ item.identityCard + `</p></div>
+                                            </div>
+                                             <div class="row">
+                                                <div class="col-md-3"><label>Gender : </label></div>
+                                                <div class="col-md-9"> <p>`+ item.sex + `</p></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3"><label>Birthday : </label></div>
+                                                <div class="col-md-9"> <p>`+item.birthday + `</p></div>
+                                            </div>
+                                         </div>
+                                    </div>
                                 </div>
-           
                             </div>
                         </div>`);
 
@@ -58,30 +89,45 @@ class Employees {
 
 
         var tr = document.getElementsByTagName("tr");
-        for (var i = 0; i < tr.length-1; i++) {
-            var modal = document.getElementById("myModal" + i.toString());
+        for (var i = 1; i < tr.length; i++) {
+
+            var modal = document.getElementById("myModal" + (i-1));
             // Get the button that opens the modal
-            var btn = document.getElementsByTagName("tr")[i+1];
 
             // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[i];
+            var span = document.getElementsByClassName("close")[i-1];
 
             // When the user clicks on the button, open the modal
-            btn.onclick = function () {
-                modal.style.display = "block";
-
+            tr[i].onclick = function (event) {
+                var row = event.target.parentElement;
+                var modal1 = document.getElementById("myModal" + row.getElementsByClassName("index")[0].innerText);
+                modal1.style.display = "block";
             }
 
             // When the user clicks on <span> (x), close the modal
             span.onclick = function () {
-                modal.style.display = "none";
+                var modal2 = document.getElementsByClassName("modal");
+                for (var i = 0; i < modal2.length; i++) {
+                    
+                    if (event.target.parentElement.parentElement.parentElement.id == "myModal" + i) {
+                        modal2[i].style.display = "none";
+                        break;
+                    }
+
+                }
+
             }
 
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+                
+                var modal2 = document.getElementsByClassName("modal");
+                for (var i = 0; i < modal2.length; i++) {
+
+                    if (event.target == modal2[i])
+                        modal2[i].style.display = "none";
                 }
+               
             }
         }
 
@@ -111,105 +157,5 @@ class Employees {
 
 
 
-    ValidateInput() {
-        var name = $('#inputname').val();
-        var email = $('#inputEmail').val();
-        var address = $('#inputAddress').val();
-        var phone = $('#inputPhone').val();
-        var identitycard = $('#inputidentify').val();
-        var birthday = $('#inputBirthdate').val();
-        var salary = $('#inputSalary').val();
-
-        if (name != null) {
-            if (name == "") {
-                $('#error-input-name').html("You have to fill your name!");
-                self.validate = false;
-            }
-            
-        }
-
-        if (email != null) {
-            if (email == "") {
-                $('#error-input-email').html("You have to fill your email!");
-                self.validate = false;
-            }
-
-        }
-
-        if (phone != null) {
-            if (phone == "") {
-                $('#error-input-phone').html("You have to fill your phone!");
-                this.validate = false;
-            }
-        }
-
-        if (address != null) {
-            if (address == "") {
-                $('#error-input-address').html("You have to fill your address!");
-                this.validate = false;
-            }
-        }
-
-        if (identitycard != null) {
-            if (identitycard == "") {
-                $('#error-input-identitycard').html("You have to fill your identitycard!");
-                this.validate = false;
-            }
-        }
-
-        if (birthday != null) {
-            if (birthday == "") {
-                $('#error-input-birthday').html("You have to fill your birthday!");
-                this.validate = false;
-            }
-        }
-
-        if (salary != null) {
-            if (salary == "") {
-                $('#error-input-salary').html("You have to fill your salary!");
-                this.validate = false;
-            }
-        }
-
-    }
-
-
-    callApiSaveEmployee() {
-
-        var employee = {
-            name: $('#inputname').val(),
-            phone: $('#inputPhone').val(),
-            email: $('#inputEmail').val(),
-            address: $('#inputAddress').val(),
-            identityCard: $('#inputBirthdate').val(),
-            birthday: $('#inputBirthdate').val(),
-            sex: $("input[type='radio',name='gender']:checked").val(),
-            salary: $('#inputSalary').val(),
-            image: $('.img-addproduct')[0].attr(src)
-        };
-
-        $.ajax({
-            url: "http://localhost:4431/employee",
-            method: "POST",
-            data: JSON.stringify(employee), // Truyền xuống thông qua body request.
-            contentType: "application/json", //Kiểu dữ liệu trả về.
-            dataType: "json", //Kiểu dữ liệu truyền lên.
-        }).done(function (response) {
-            if (response) {
-                alert("Thêm thành công");
-                window.location.href = "ListEmployee.html";
-            }
-            else
-                alert(" Thất bại");
-            }).fail(function () {
-                alert("thêm ko thành công");
-        });
-    }
-
-    addEmployee() {
-        this.ValidateInput();
-        if (this.validate == true)
-            this.callApiSaveEmployee();
-        
-    }
+    
 }

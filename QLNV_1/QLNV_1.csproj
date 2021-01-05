@@ -99,6 +99,9 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="View\CSS\Main.css" />
+    <Content Include="View\Images\image1.jpg" />
+    <Content Include="View\Page\index.html" />
+    <Content Include="View\Script\AddEmployee.js" />
     <Content Include="View\Script\Main.js" />
     <Content Include="View\Page\AddEmployee.html" />
     <Content Include="View\Page\Home.html" />
