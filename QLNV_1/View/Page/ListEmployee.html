@@ -16,7 +16,7 @@
     <div id="container">
         <div class="row">
             <div class="sidenav col-md-2">
-                <a href="#about">Home</a>
+                <a href="#about"> <span><i class="fas fa-home"></i></span> Home</a>
                 <a href="#contact">Add Employees</a>
                 <button class="dropdown-btn">
                     Manage
@@ -26,7 +26,10 @@
                     <a href="AddEmployee.html">Add Employees</a>
                     <a href="#">List Employees</a>
                 </div>
-                <a href="#contact">Search</a>
+                <form action="#">
+                    <input id="input-search-home" type="text" placeholder="Search" />
+                    <button class="search-btn" type="submit"><span><i style="color:aliceblue;" class="fas fa-search"></i></span> </button>
+                </form>
             </div>
             <div class="content col-md-10">
                 <h4 class="title">LIST ALL EMPLOYEES</h4>

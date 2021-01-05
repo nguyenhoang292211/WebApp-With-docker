@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" href="../CSS/Main.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div class="row">
+            <div class="sidenav col-md-2">
+                <a href="#about"> <span><i class="fas fa-home"></i></span> Home</a>
+                <a href="#contact">Add Employees</a>
+                <button class="dropdown-btn">
+                    Manage
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                    <a href="AddEmployee.html">Add Employees</a>
+                    <a href="#">List Employees</a>
+                </div>
+                <form action="#">
+                    <input id="input-search-home" type="text" placeholder="Search" />
+                    <button class="search-btn" type="submit"><span><i style="color:aliceblue;" class="fas fa-search"></i></span> </button>
+                </form>
+            </div>
+            <div class="content col-md-10">
+                <div class="attendance">
+                    <div class="content-attendance">
+                        <span>Wellcome to my company !</span>
+                        <form class="searchID" action=" #">
+                            <input class="txtSearchID" type="text" placeholder="Search" />
+                            <button class="btn" type="submit" name="searchID"> <i class="fas fa-search"></i> </button>
+                        </form>
+                    </div>
+
+                    <div class="main-attendance">
+
+                        <div class="attendance-all">
+                            <div class="option year-attendance">
+                                <label>Year</label>
+                                <select name="year" class="year">
+                                    <option value="2020" selected>2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                </select>
+                            </div>
+
+                            <div class="option year-attendance">
+                                <label>Month</label>
+                                <select name="month" class="month">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="table-attendance-all">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Day on</th>
+                                            <th scope="col">Day off</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Id</th>
+                                            <td>Name</td>
+                                            <td>0</td>
+                                            <td>0</td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <hr class="new2">
+                        <div class="attendance-one">
+
+
+                            <label>name employee</label>
+
+
+                            <div class="table-attendance-one">
+
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">1</th>
+                                            <th scope="col">2</th>
+                                            <th scope="col">3</th>
+                                            <th scope="col">4</th>
+                                            <th scope="col">5</th>
+                                            <th scope="col">6</th>
+                                            <th scope="col">7</th>
+                                            <th scope="col">8</th>
+                                            <th scope="col">9</th>
+                                            <th scope="col">10</th>
+                                            <th scope="col">11</th>
+                                            <th scope="col">12</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Day on</th>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Day off</th>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+
+    </script>
+
+    <script src="../Script/Main.js" type="text/javascript"></script>
+</body>
+
+</html>
