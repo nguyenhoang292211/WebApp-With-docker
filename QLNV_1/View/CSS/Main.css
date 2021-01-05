@@ -1,0 +1,98 @@
+﻿
+.sidenav
+{
+    background-color: black;
+
+}
+
+.content .title
+{
+    margin-top:40px;
+    font-size:28px;
+    font-family: Arial;
+    margin-bottom:20px;
+}
+
+.sidenav a{
+    color: white;
+    padding:5px;
+
+}
+thead tr{
+    background-color:black;
+    color: white;
+    border:1px thin;
+}
+
+
+
+
+#listEmployee tr:hover {
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+#listEmployee td{
+    border: 1px solid grey;
+}
+
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 4px !important;
+    background-color: midnightblue;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+}
+.close
+{
+    color: white!important;
+    cursor: pointer;
+}
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    margin-top: 200px;
+    margin-left: 20% !important;
+    width: 70% !important;
+    padding: 0;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top:30px;
+        opacity: 0
+    }
+
+
+    to {
+        top:40px;
+        opacity: 0.8
+    }
+}
+
+/*--------------------ADD EMPLOYEE------------------------*/
+
+.img-addproduct{
+    margin-left:20px;
+    margin-top: 10px;
+    height: 200px;
+    width: auto;
+}
+
+.error-input{
+    font-size: 12px;
+    color: red;
+}
