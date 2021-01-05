@@ -14,18 +14,21 @@
 
 <body>
     <div class="menu-left">
-        <div class="sidenav">
-            <a href="#about">Home</a>
-            <a href="AddEmployee.html">Add Employees</a>
+        <div class="sidenav col-md-2">
+            <a href="#about"> <span><i class="fas fa-home"></i></span> Home</a>
+            <a href="#contact">Add Employees</a>
             <button class="dropdown-btn">
                 Manage
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-container">
-                <a href="#">Add Employees</a>
-                <a href="ListEmployee.html">List Employees</a>
+                <a href="AddEmployee.html">Add Employees</a>
+                <a href="#">List Employees</a>
             </div>
-            <a href="#contact">Search</a>
+            <form action="#">
+                <input id="input-search-home" type="text" placeholder="Search" />
+                <button class="search-btn" type="submit"><span><i style="color:aliceblue;" class="fas fa-search"></i></span> </button>
+            </form>
         </div>
     </div>
     <script>

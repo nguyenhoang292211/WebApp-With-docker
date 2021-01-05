@@ -1,9 +1,16 @@
 ﻿
+/*-------------------------HOME-------------------*/
+
+
+
 .sidenav
 {
     background-color: black;
+    width: 200px;
+    height: 120vh;
 
 }
+
 
 .content .title
 {
@@ -13,18 +20,62 @@
     margin-bottom:20px;
 }
 
-.sidenav a{
+.sidenav a {
     color: white;
-    padding:5px;
-
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
+    width: 200px;
+    height: 34px;
 }
-thead tr{
-    background-color:black;
+
+.sidenav a:hover, .sidenav a:active{
+    border:1px solid white;
+    text-decoration-line: none;
+    color: aqua;
+}
+
+.dropdown-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 34px;
+    background-color: black;
     color: white;
-    border:1px thin;
+    border: none;
+    text-align:left;
+}
+
+.dropdown-btn:active, .dropdown-btn:hover {
+    border: 1px solid white;
+}
+
+thead tr {
+    background-color: black;
+    color: white;
+    border: 1px thin;
 }
 
 
+/*
+
+    th {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 10%;
+}
+
+th:nth-child(3) {
+    width: 15%;
+}
+
+th:nth-child(1) {
+    width: 5%;
+}
+
+*/
 
 
 #listEmployee tr:hover {
@@ -108,4 +159,119 @@ thead tr{
 .error-input{
     font-size: 12px;
     color: red;
+}
+
+.title-infor{
+    margin-left: 20vw;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/*-------------POSITION----------------*/
+
+.position-main{
+    margin-top: 30px;
+}
+.position-body {
+    margin-top: 40px;
+}
+
+.btn-group-edit {
+    margin-left: 50%;
+}
+
+.title-position{
+    margin-left: 30vw;
+}
+
+.position{
+    display: block;
+}
+
+.department {
+    margin-top: 70px;
+    display: block;
+}
+
+/*-----------ATTENDANCE----------------*/
+
+.content-attendance {
+    display: block;
+    height:20vh;
+    background-color: antiquewhite;
+    margin-left: -15px;
+}
+.main-attendance{
+    display: block;
+
+}
+
+.searchID {
+    margin-left: 60vw;
+    height: 50px !important;
+}
+
+.txtSearchID{
+    height: 42px !important;
+    width: 250px !important;
+    display:inline-block !important;
+    border: 1px solid black;
+}
+
+.btn {
+    display: inline-block !important;
+}
+
+.option{
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+select {
+    /*for firefox*/
+    -moz-appearance: none;
+    /*for chrome*/
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-color: antiquewhite;
+    color:black;
+    height: 30px;
+    width: 50px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+option{
+    text-align: center;
+}
+/*for IE10+*/
+select::-ms-expand {
+    display: none;
+}
+
+.table-attendance-one{
+    margin-top: 20px;
+}
+
+hr.new2 {
+    border-top: 1px dashed black;
+}
+
+.search-btn {
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: black;
+    font-weight:lighter;
+    
+}
+
+#input-search-home{
+    width: 150px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: black;
+    display:inline-block;
 }

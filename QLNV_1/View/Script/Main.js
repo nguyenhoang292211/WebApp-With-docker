@@ -148,7 +148,7 @@ class Employees {
             self.loadEmployeesUI(response);
         }).fail(function () {
 
-                alert("fail");
+               // alert("fail");
             });
 
 
