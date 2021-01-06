@@ -1,4 +1,115 @@
-﻿$(document).ready(function () {
+﻿
+$(document).ready(function () {
+
+    var po = new Positions();
+
+})
+
+class Positions {
+
+    constructor() {
+        this.init();
+        self = this;
+        var validate = true;
+
+    }
+
+    init() {
+        this.getAllPositions();
+    }
+
+    loadPositionsUI(positions) {
+        $('#listPosition').empty();
+        $.each(positions, function (index, item) {
+            var html = $(`<tr class="data">
+                        <td class="index">`+ index + `</td>                       
+                        <td>`+ item.name + `</td>
+                       
+                    </tr>`);
+            $('#listPosition').append(html);
+        });
+    }
+
+
+    getAllPositions() {
+        self = this;
+        var URL = "http://localhost:4431/findAllPosition";
+        $.ajax({
+            url: URL,
+            method: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            dataType: "json"
+        }).done(function (response) {
+            self.loadPositionsUI(response);
+        }).fail(function () {
+
+            // alert("fail");
+        });
+    }
+           
+       
+}
+
+
+
+$(document).ready(function () {
+
+    var de = new Departments();
+
+})
+
+class Departments {
+
+    constructor() {
+        this.init();
+        self = this;
+        var validate = true;
+
+    }
+
+    init() {
+        this.getAllDepartment();
+    }
+
+    loadPositionsUI(departments) {
+        $('#listDepartment').empty();
+        $.each(departments, function (index, item) {
+            var html = $(`<tr class="data">
+                        <td class="index">`+ index + `</td>                      
+                        <td>`+ item.name + `</td>
+                      
+                    </tr>`);
+            $('#listDepartment').append(html);
+        });
+    }
+
+
+    getAllDepartment() {
+        self = this;
+        var URL = "http://localhost:4431/findAllDepartment";
+        $.ajax({
+            url: URL,
+            method: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            dataType: "json"
+        }).done(function (response) {
+            self.loadPositionsUI(response);
+        }).fail(function () {
+
+            // alert("fail");
+        });
+    }
+
+
+}
+
+$(document).ready(function () {
 
     var em = new Employees();
     
