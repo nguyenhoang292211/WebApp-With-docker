@@ -23,14 +23,17 @@ class Employees {
         $('#listEmployee').empty();
         $.each(employees, function (index, item) {
             var html = $(`<tr class="data">
-                        <td class="index">`+ index +`</td>
-                        <td><img src="" /></td>
-                        <td>`+ item.name +`</td>
-                        <td>`+item.phone+`</td>
-                        <td>`+item.birthday+`</td>
-                        <td>`+item.sex+`</td>
-                        <td>`+item.department+`</td>
-                    </tr>`);
+                            <input class="idemployee" type="hidden" value=`+ item.id +`></input>
+                            <td class="index">`+ index +`</td>
+                            <td><img src="" /></td>
+                            <td>`+ item.name +`</td>
+                            <td>`+item.phone+`</td>
+                            <td>`+item.birthday+`</td>
+                            <td>`+item.sex+`</td>
+                            <td>`+ item.department +`</td>
+                            <td>  <i class="fas fa-trash"></i><i class="fas fa-pen"></i></td>
+                         
+                        </tr>`);
             $('#listEmployee').append(html);
 
             var html1 = $(`<div id="myModal` + index +`" class="modal">
@@ -85,9 +88,10 @@ class Employees {
 
             $('#container').append(html1);
 
+            
         });
 
-
+        self =this;
         var tr = document.getElementsByTagName("tr");
         for (var i = 1; i < tr.length; i++) {
 
@@ -99,9 +103,21 @@ class Employees {
 
             // When the user clicks on the button, open the modal
             tr[i].onclick = function (event) {
-                var row = event.target.parentElement;
-                var modal1 = document.getElementById("myModal" + row.getElementsByClassName("index")[0].innerText);
-                modal1.style.display = "block";
+                var row = event.target;
+                if (row.className == "delete activated" || row.className == "fas fa-trash") {
+                    self.deleteEmployee(row.parentElement.parentElement.getElementsByClassName("idemployee")[0].value);
+                }
+                else
+                if (row.className == "fas fa-pen")
+                {
+                    window.location.href = "AddEmployee.html?id=" + row.parentElement.parentElement.getElementsByClassName("idemployee")[0].value;
+                }
+
+                else {
+                    var modal1 = document.getElementById("myModal" + row.parentElement.getElementsByClassName("index")[0].innerText);
+                    modal1.style.display = "block";
+                }
+               
             }
 
             // When the user clicks on <span> (x), close the modal
@@ -131,6 +147,27 @@ class Employees {
             }
         }
 
+    }
+
+    deleteEmployee(id_employee) {
+        self = this;
+        var URL = "http://localhost:4431/employee/" + id_employee;
+        $.ajax({
+            url: URL,
+            method: "DELETE",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            dataType: ""
+        }).done(function () {
+
+            self.getAllEmployees();
+
+            }).fail(function () {
+
+                alert("xóa lỗi")
+            });
     }
 
     getAllEmployees() {

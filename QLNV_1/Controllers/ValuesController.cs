@@ -48,5 +48,7 @@ namespace QLNV_1.Controllers
         public void Delete(int id)
         {
         }
+
+    
     }
 }
