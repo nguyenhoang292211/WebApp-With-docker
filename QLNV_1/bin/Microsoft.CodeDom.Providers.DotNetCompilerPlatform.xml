@@ -14,6 +14,7 @@
             Default Constructor
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider.#ctor(Microsoft.CodeDom.Providers.DotNetCompilerPlatform.ICompilerSettings)">
             <summary>
             Creates an instance using the given ICompilerSettings
@@ -26,12 +27,15 @@
             </summary>
             <param name="providerOptions"></param>
         </member>
+=======
+>>>>>>> 412cca86031415aca28176d10ca3311231f75be2
         <member name="M:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider.CreateCompiler">
             <summary>
             Gets an instance of the .NET Compiler Platform C# code compiler.
             </summary>
             <returns>An instance of the .NET Compiler Platform C# code compiler</returns>
         </member>
+<<<<<<< HEAD
         <member name="T:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.IProviderOptions">
             <summary>
             Provides settings for the C# and VB CodeProviders
@@ -126,6 +130,8 @@
             TTL in seconds
             </summary>
         </member>
+=======
+>>>>>>> 412cca86031415aca28176d10ca3311231f75be2
         <member name="T:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider">
             <summary>
             Provides access to instances of the .NET Compiler Platform VB code generator and code compiler.
@@ -136,6 +142,7 @@
             Default Constructor
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider.#ctor(Microsoft.CodeDom.Providers.DotNetCompilerPlatform.ICompilerSettings)">
             <summary>
             Creates an instance using the given ICompilerSettings
@@ -148,6 +155,8 @@
             </summary>
             <param name="providerOptions"></param>
         </member>
+=======
+>>>>>>> 412cca86031415aca28176d10ca3311231f75be2
         <member name="M:Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider.CreateCompiler">
             <summary>
             Gets an instance of the .NET Compiler Platform VB code compiler.
